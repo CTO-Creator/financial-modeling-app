@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Modeling App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Financial Modeling App</h1>
+
+    <!-- Form for Adding Financial Data -->
+    <div class="form-container">
+      <h2>Enter Financial Data</h2>
+      <form id="financial-form">
+        <label for="entry-date">Date:</label>
+        <input type="date" id="entry-date" required>
+
+        <label for="category">Category:</label>
+        <select id="category" required>
+          <option value="revenue">Revenue</option>
+          <option value="expenses">Expenses</option>
+        </select>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" required>
+
+        <button type="submit">Add Entry</button>
+      </form>
+    </div>
+
+    <!-- Chart for Displaying Historical Data -->
+    <div class="chart-container">
+      <h2>Historical Data</h2>
+      <canvas id="financial-chart" width="400" height="200"></canvas>
+    </div>
+
+    <!-- Model Future Financial Projections -->
+    <div class="forecast-container">
+      <h2>Model Future Financial Projections</h2>
+      <label for="growth-rate">Expected Growth Rate (%):</label>
+      <input type="number" id="growth-rate" placeholder="Enter growth rate" min="0" required>
+
+      <button id="forecast-btn">Forecast Future</button>
+      <div id="forecast-result"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
